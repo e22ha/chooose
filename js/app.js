@@ -13,11 +13,14 @@ const cardsRow = document.getElementById('cards-row');
 const nextButton = document.getElementById('next-button');
 const changeModeButton = document.getElementById('change-mode-button');
 const fatalError = document.getElementById('fatal-error');
+const roundCounter = document.getElementById('round-counter');
+const chipHint = document.getElementById('chip-hint');
 
 let pool = [];
 let deck = null;
 let activeLabels = null; // array of 3 strings, or null for "no labels"
 let pinState = createPinState();
+let roundNumber = 0;
 
 PRESETS.forEach((preset, index) => {
   const option = document.createElement('option');
@@ -28,8 +31,8 @@ PRESETS.forEach((preset, index) => {
 
 function updateModeVisibility() {
   const mode = document.querySelector('input[name="mode"]:checked').value;
-  customInputs.style.display = mode === 'custom' ? 'block' : 'none';
-  presetSelect.style.display = mode === 'preset' ? 'inline-block' : 'none';
+  customInputs.style.display = mode === 'custom' ? 'grid' : 'none';
+  presetSelect.style.display = mode === 'preset' ? 'block' : 'none';
 }
 document.querySelectorAll('input[name="mode"]').forEach((radio) => {
   radio.addEventListener('change', updateModeVisibility);
@@ -63,7 +66,7 @@ function updatePoolStatus() {
     poolStatus.textContent = `Нужно минимум 3 фото, сейчас: ${pool.length}.`;
     startButton.disabled = true;
   } else {
-    poolStatus.textContent = `Фото в пачке: ${pool.length}.`;
+    poolStatus.textContent = `📸 В колоде ${pool.length} фото`;
     startButton.disabled = false;
   }
 }
@@ -104,12 +107,24 @@ startButton.addEventListener('click', () => {
   }
 
   deck = new Deck(pool);
+  roundNumber = 0;
   startScreen.hidden = true;
   roundScreen.hidden = false;
   drawNextTriple();
 });
 
 nextButton.addEventListener('click', drawNextTriple);
+
+document.addEventListener('keydown', (event) => {
+  if (roundScreen.hidden || event.code !== 'Space') {
+    return;
+  }
+  if (event.target instanceof HTMLElement && event.target.closest('button, input, select')) {
+    return;
+  }
+  event.preventDefault();
+  drawNextTriple();
+});
 
 changeModeButton.addEventListener('click', () => {
   roundScreen.hidden = true;
@@ -120,12 +135,32 @@ changeModeButton.addEventListener('click', () => {
 function drawNextTriple() {
   pinState = createPinState();
   const triple = deck.next();
+  roundNumber += 1;
+  roundCounter.textContent = `Тройка №${roundNumber}`;
   renderCards(triple);
   renderChips();
 }
 
+function colorIndex(label) {
+  return String(activeLabels ? activeLabels.indexOf(label) : 0);
+}
+
+function renderHint() {
+  if (!activeLabels) {
+    chipHint.textContent = '';
+  } else if (pinState.armed) {
+    chipHint.textContent = `Кому «${pinState.armed}»? Нажми на карточку`;
+  } else if (Object.keys(pinState.pins).length === activeLabels.length) {
+    chipHint.textContent = 'Все выбраны! Жми «Следующая тройка»';
+  } else {
+    chipHint.textContent = 'Выбери лейбл, потом карточку';
+  }
+  roundScreen.classList.toggle('round--armed', Boolean(pinState.armed));
+}
+
 function renderChips() {
   chipRow.innerHTML = '';
+  renderHint();
   if (!activeLabels) {
     return;
   }
@@ -133,6 +168,7 @@ function renderChips() {
     const button = document.createElement('button');
     button.textContent = label;
     button.className = 'chip';
+    button.dataset.color = colorIndex(label);
     const used = Object.values(pinState.pins).includes(label);
     const armed = pinState.armed === label;
     button.classList.toggle('chip--armed', armed);
@@ -153,6 +189,9 @@ function renderCards(triple) {
     const card = document.createElement('div');
     card.className = 'card';
 
+    const photo = document.createElement('div');
+    photo.className = 'card-photo';
+
     const img = document.createElement('img');
     img.src = `photos/${person.file}`;
     img.alt = person.name;
@@ -167,11 +206,13 @@ function renderCards(triple) {
     const pinnedLabel = document.createElement('div');
     pinnedLabel.className = 'card-pinned-label';
 
-    card.appendChild(img);
+    photo.appendChild(img);
+    photo.appendChild(pinnedLabel);
+    card.appendChild(photo);
     card.appendChild(name);
-    card.appendChild(pinnedLabel);
 
     if (activeLabels) {
+      card.classList.add('card--clickable');
       card.addEventListener('click', () => {
         pinState = clickCard(pinState, index);
         renderChips();
@@ -187,7 +228,10 @@ function renderCards(triple) {
 function renderCardLabels() {
   cardsRow.querySelectorAll('.card').forEach((card, index) => {
     const labelEl = card.querySelector('.card-pinned-label');
-    labelEl.textContent = pinState.pins[index] ?? '';
+    const label = pinState.pins[index];
+    labelEl.textContent = label ?? '';
+    card.classList.toggle('card--pinned', label !== undefined);
+    card.dataset.color = label !== undefined ? colorIndex(label) : '0';
   });
 }
 
