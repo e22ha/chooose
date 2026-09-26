@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вся колода — Кто из троих?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <span class="orb orb--1"></span>
+    <span class="orb orb--2"></span>
+    <span class="orb orb--3"></span>
+  </div>
+
+  <main class="screen">
+    <div class="round-top">
+      <a href="./" class="btn btn--ghost">← К игре</a>
+      <span id="gallery-count" class="pill"></span>
+    </div>
+
+    <header class="hero hero--compact">
+      <h1>Вся <span class="accent">колода</span></h1>
+      <p class="lead">Все, кто сейчас есть на сайте. Битые фото помечены красным.</p>
+      <input type="search" id="gallery-search" placeholder="Поиск по имени…" aria-label="Поиск по имени" />
+    </header>
+
+    <p id="gallery-empty" class="hint" hidden></p>
+    <div id="gallery-grid"></div>
+    <p id="fatal-error" class="error" hidden></p>
+  </main>
+
+  <script type="module" src="js/gallery.js"></script>
+</body>
+</html>
