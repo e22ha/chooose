@@ -1,0 +1,105 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  max-width: 720px;
+}
+
+.error {
+  color: #b00020;
+  font-weight: 600;
+}
+
+fieldset {
+  margin: 1rem 0;
+}
+
+#cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.card {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.card:hover {
+  border-color: #999;
+}
+
+.card img,
+.placeholder-box {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #ddd;
+}
+
+.placeholder-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.card-name {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.card-pinned-label {
+  min-height: 1.2em;
+  color: #0066cc;
+  font-weight: 600;
+}
+
+#chip-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.chip {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #999;
+  background: white;
+  cursor: pointer;
+}
+
+.chip--armed {
+  background: #0066cc;
+  color: white;
+}
+
+.chip--used {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
