@@ -1,74 +1,454 @@
 [
   {
-    "file": "Alisa.jpg",
-    "name": "Alisa"
+    "file": "5opka.webp",
+    "name": "5opka"
   },
   {
-    "file": "Boris.jpg",
-    "name": "Boris"
+    "file": "ALOHADANCETV.webp",
+    "name": "ALOHADANCETV"
   },
   {
-    "file": "Darya.jpg",
-    "name": "Darya"
+    "file": "Aunkere.jpg",
+    "name": "Aunkere"
   },
   {
-    "file": "Egor.jpg",
-    "name": "Egor"
+    "file": "Bandospapa.jpg",
+    "name": "Bandospapa"
   },
   {
-    "file": "Fedya.jpg",
-    "name": "Fedya"
+    "file": "C_a_k_e.webp",
+    "name": "C a k e"
   },
   {
-    "file": "Gleb.jpg",
-    "name": "Gleb"
+    "file": "DIMAGORDEY_.jpg",
+    "name": "DIMAGORDEY"
   },
   {
-    "file": "Ilya.jpg",
-    "name": "Ilya"
+    "file": "Danila_Gorilla.webp",
+    "name": "Danila Gorilla"
   },
   {
-    "file": "Katya.jpg",
-    "name": "Katya"
+    "file": "Davay_po_Novoy.webp",
+    "name": "Davay po Novoy"
   },
   {
-    "file": "Lev.jpg",
-    "name": "Lev"
+    "file": "Daxak.webp",
+    "name": "Daxak"
   },
   {
-    "file": "Mila.jpg",
-    "name": "Mila"
+    "file": "Dmitry_Lixxx.webp",
+    "name": "Dmitry Lixxx"
   },
   {
-    "file": "Nikita.jpg",
-    "name": "Nikita"
+    "file": "DreadzTV.jpg",
+    "name": "DreadzTV"
   },
   {
-    "file": "Olga.jpg",
-    "name": "Olga"
+    "file": "Exileshow.webp",
+    "name": "Exileshow"
   },
   {
-    "file": "Pavel.jpg",
-    "name": "Pavel"
+    "file": "FORZOREZOR.webp",
+    "name": "FORZOREZOR"
   },
   {
-    "file": "Rita.jpg",
-    "name": "Rita"
+    "file": "FlackJK.webp",
+    "name": "FlackJK"
   },
   {
-    "file": "Stas.jpg",
-    "name": "Stas"
+    "file": "GUACAMOLEMOLLY.webp",
+    "name": "GUACAMOLEMOLLY"
   },
   {
-    "file": "Taya.jpg",
-    "name": "Taya"
+    "file": "GwinGlade.webp",
+    "name": "GwinGlade"
   },
   {
-    "file": "Vera.jpg",
-    "name": "Vera"
+    "file": "IvanZolo578.webp",
+    "name": "IvanZolo578"
   },
   {
-    "file": "Zhenya.jpg",
-    "name": "Zhenya"
+    "file": "JojoHF.webp",
+    "name": "JojoHF"
+  },
+  {
+    "file": "JustCooman.webp",
+    "name": "JustCooman"
+  },
+  {
+    "file": "KERIMCH1K.webp",
+    "name": "KERIMCH1K"
+  },
+  {
+    "file": "KappaPrideSummoner.webp",
+    "name": "KappaPrideSummoner"
+  },
+  {
+    "file": "Lasqa.webp",
+    "name": "Lasqa"
+  },
+  {
+    "file": "LenaGol0vach.webp",
+    "name": "LenaGol0vach"
+  },
+  {
+    "file": "Loru77.webp",
+    "name": "Loru77"
+  },
+  {
+    "file": "MuHaNjAn.webp",
+    "name": "MuHaNjAn"
+  },
+  {
+    "file": "Murzofix.webp",
+    "name": "Murzofix"
+  },
+  {
+    "file": "Narek_Cr.webp",
+    "name": "Narek Cr"
+  },
+  {
+    "file": "Nix.webp",
+    "name": "Nix"
+  },
+  {
+    "file": "PCH3LK1N.webp",
+    "name": "PCH3LK1N"
+  },
+  {
+    "file": "Pinqtost.webp",
+    "name": "Pinqtost"
+  },
+  {
+    "file": "QUICKHUNTIK.webp",
+    "name": "QUICKHUNTIK"
+  },
+  {
+    "file": "RUSLANDVIP.webp",
+    "name": "RUSLANDVIP"
+  },
+  {
+    "file": "RavshanN.webp",
+    "name": "RavshanN"
+  },
+  {
+    "file": "Recrent.webp",
+    "name": "Recrent"
+  },
+  {
+    "file": "SKILLZ0R1337.webp",
+    "name": "SKILLZ0R1337"
+  },
+  {
+    "file": "STANISLAW9.webp",
+    "name": "STANISLAW9"
+  },
+  {
+    "file": "SYSLOV171.webp",
+    "name": "SYSLOV171"
+  },
+  {
+    "file": "SilverName.webp",
+    "name": "SilverName"
+  },
+  {
+    "file": "Solo.webp",
+    "name": "Solo"
+  },
+  {
+    "file": "StRoGo.webp",
+    "name": "StRoGo"
+  },
+  {
+    "file": "Stintik.webp",
+    "name": "Stintik"
+  },
+  {
+    "file": "Stray228.webp",
+    "name": "Stray228"
+  },
+  {
+    "file": "T2x2.webp",
+    "name": "T2x2"
+  },
+  {
+    "file": "TpaBoMaH.webp",
+    "name": "TpaBoMaH"
+  },
+  {
+    "file": "VATARlS.webp",
+    "name": "VATARlS"
+  },
+  {
+    "file": "VLOVEVS.jpg",
+    "name": "VLOVEVS"
+  },
+  {
+    "file": "VladRagovsky.webp",
+    "name": "VladRagovsky"
+  },
+  {
+    "file": "VooDooSh.webp",
+    "name": "VooDooSh"
+  },
+  {
+    "file": "Vovapain.webp",
+    "name": "Vovapain"
+  },
+  {
+    "file": "WHOPLOHOYPAREN.webp",
+    "name": "WHOPLOHOYPAREN"
+  },
+  {
+    "file": "Welovegames.webp",
+    "name": "Welovegames"
+  },
+  {
+    "file": "ZLOYn.webp",
+    "name": "ZLOYn"
+  },
+  {
+    "file": "afoninje.webp",
+    "name": "afoninje"
+  },
+  {
+    "file": "anarabdullaev.webp",
+    "name": "anarabdullaev"
+  },
+  {
+    "file": "anastaze.webp",
+    "name": "anastaze"
+  },
+  {
+    "file": "andreynoiles.webp",
+    "name": "andreynoiles"
+  },
+  {
+    "file": "baz1221.webp",
+    "name": "baz1221"
+  },
+  {
+    "file": "bratishkinoff.webp",
+    "name": "bratishkinoff"
+  },
+  {
+    "file": "buster.webp",
+    "name": "buster"
+  },
+  {
+    "file": "bySL4M.jpg",
+    "name": "bySL4M"
+  },
+  {
+    "file": "cheatbanned.webp",
+    "name": "cheatbanned"
+  },
+  {
+    "file": "chopperinho.webp",
+    "name": "chopperinho"
+  },
+  {
+    "file": "clean_killl.webp",
+    "name": "clean killl"
+  },
+  {
+    "file": "ct0m.webp",
+    "name": "ct0m"
+  },
+  {
+    "file": "dangerlyoha.webp",
+    "name": "dangerlyoha"
+  },
+  {
+    "file": "deepins.webp",
+    "name": "deepins"
+  },
+  {
+    "file": "derzko69.webp",
+    "name": "derzko69"
+  },
+  {
+    "file": "des0ut.webp",
+    "name": "des0ut"
+  },
+  {
+    "file": "dilblin.webp",
+    "name": "dilblin"
+  },
+  {
+    "file": "drakeoffc.webp",
+    "name": "drakeoffc"
+  },
+  {
+    "file": "dyrachyo.webp",
+    "name": "dyrachyo"
+  },
+  {
+    "file": "egorkreed.webp",
+    "name": "egorkreed"
+  },
+  {
+    "file": "enzzai.webp",
+    "name": "enzzai"
+  },
+  {
+    "file": "evelone2004.webp",
+    "name": "evelone2004"
+  },
+  {
+    "file": "everybodySOSA.webp",
+    "name": "everybodySOSA"
+  },
+  {
+    "file": "evilarthas.webp",
+    "name": "evilarthas"
+  },
+  {
+    "file": "fANDERCS.webp",
+    "name": "fANDERCS"
+  },
+  {
+    "file": "fcsm_kefir.webp",
+    "name": "fcsm kefir"
+  },
+  {
+    "file": "finargot.jpg",
+    "name": "finargot"
+  },
+  {
+    "file": "follentass.webp",
+    "name": "follentass"
+  },
+  {
+    "file": "frametamer666.webp",
+    "name": "frametamer666"
+  },
+  {
+    "file": "guit88man.webp",
+    "name": "guit88man"
+  },
+  {
+    "file": "hypetried.webp",
+    "name": "hypetried"
+  },
+  {
+    "file": "indian0ch.webp",
+    "name": "indian0ch"
+  },
+  {
+    "file": "just_ns.webp",
+    "name": "just ns"
+  },
+  {
+    "file": "kopsteep.webp",
+    "name": "kopsteep"
+  },
+  {
+    "file": "koreshzy.webp",
+    "name": "koreshzy"
+  },
+  {
+    "file": "kuertov.webp",
+    "name": "kuertov"
+  },
+  {
+    "file": "kussia88.webp",
+    "name": "kussia88"
+  },
+  {
+    "file": "leva2k.webp",
+    "name": "leva2k"
+  },
+  {
+    "file": "m1xerboy.jpg",
+    "name": "m1xerboy"
+  },
+  {
+    "file": "m3wsu.webp",
+    "name": "m3wsu"
+  },
+  {
+    "file": "m4ga.webp",
+    "name": "m4ga"
+  },
+  {
+    "file": "maddyson.webp",
+    "name": "maddyson"
+  },
+  {
+    "file": "mokrivskyi.webp",
+    "name": "mokrivskyi"
+  },
+  {
+    "file": "overdrivezzz.webp",
+    "name": "overdrivezzz"
+  },
+  {
+    "file": "paradeev1ch.webp",
+    "name": "paradeev1ch"
+  },
+  {
+    "file": "pokanoname.webp",
+    "name": "pokanoname"
+  },
+  {
+    "file": "qbaxa.webp",
+    "name": "qbaxa"
+  },
+  {
+    "file": "rejiboi.webp",
+    "name": "rejiboi"
+  },
+  {
+    "file": "renatko.webp",
+    "name": "renatko"
+  },
+  {
+    "file": "rostikfacekid.webp",
+    "name": "rostikfacekid"
+  },
+  {
+    "file": "rostislav_999.webp",
+    "name": "rostislav 999"
+  },
+  {
+    "file": "sasavot.webp",
+    "name": "sasavot"
+  },
+  {
+    "file": "serega_pirat.webp",
+    "name": "serega pirat"
+  },
+  {
+    "file": "shadowkekw.webp",
+    "name": "shadowkekw"
+  },
+  {
+    "file": "skywhywalker.webp",
+    "name": "skywhywalker"
+  },
+  {
+    "file": "stariy_bog.webp",
+    "name": "stariy bog"
+  },
+  {
+    "file": "steel.webp",
+    "name": "steel"
+  },
+  {
+    "file": "stopb4n.webp",
+    "name": "stopb4n"
+  },
+  {
+    "file": "ybicanoooobov.jpg",
+    "name": "ybicanoooobov"
+  },
+  {
+    "file": "yurapivo.webp",
+    "name": "yurapivo"
+  },
+  {
+    "file": "zubarefff.webp",
+    "name": "zubarefff"
   }
 ]
