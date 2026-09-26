@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "file": "Alisa.jpg",
+    "name": "Alisa"
+  },
+  {
+    "file": "Boris.jpg",
+    "name": "Boris"
+  },
+  {
+    "file": "Darya.jpg",
+    "name": "Darya"
+  },
+  {
+    "file": "Egor.jpg",
+    "name": "Egor"
+  },
+  {
+    "file": "Fedya.jpg",
+    "name": "Fedya"
+  },
+  {
+    "file": "Gleb.jpg",
+    "name": "Gleb"
+  },
+  {
+    "file": "Ilya.jpg",
+    "name": "Ilya"
+  },
+  {
+    "file": "Katya.jpg",
+    "name": "Katya"
+  },
+  {
+    "file": "Lev.jpg",
+    "name": "Lev"
+  },
+  {
+    "file": "Mila.jpg",
+    "name": "Mila"
+  },
+  {
+    "file": "Nikita.jpg",
+    "name": "Nikita"
+  },
+  {
+    "file": "Olga.jpg",
+    "name": "Olga"
+  },
+  {
+    "file": "Pavel.jpg",
+    "name": "Pavel"
+  },
+  {
+    "file": "Rita.jpg",
+    "name": "Rita"
+  },
+  {
+    "file": "Stas.jpg",
+    "name": "Stas"
+  },
+  {
+    "file": "Taya.jpg",
+    "name": "Taya"
+  },
+  {
+    "file": "Vera.jpg",
+    "name": "Vera"
+  },
+  {
+    "file": "Zhenya.jpg",
+    "name": "Zhenya"
+  }
+]

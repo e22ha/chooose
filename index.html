@@ -4,51 +4,96 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Кто из троих?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg" aria-hidden="true">
+    <span class="orb orb--1"></span>
+    <span class="orb orb--2"></span>
+    <span class="orb orb--3"></span>
+  </div>
+
   <main>
-    <section id="start-screen">
-      <h1>Кто из троих?</h1>
-      <p id="pool-status"></p>
+    <section id="start-screen" class="screen">
+      <header class="hero">
+        <p class="eyebrow">игра для стрима и созвона</p>
+        <h1>Кто из <span class="accent">троих?</span></h1>
+        <p class="lead">
+          Три случайных лица, без повторов, пока колода не кончится.
+          Выбирайте вслух — сайт только раздаёт.
+        </p>
+        <p id="pool-status" class="pill"></p>
+      </header>
 
-      <fieldset>
+      <fieldset class="modes">
         <legend>Режим лейблов</legend>
-        <label>
+
+        <label class="mode">
           <input type="radio" name="mode" value="preset" checked />
-          Пресет
+          <span class="mode-body">
+            <span class="mode-icon">🎲</span>
+            <span class="mode-title">Пресет</span>
+            <span class="mode-desc">Готовые тройки: Kiss / Marry / Kill и другие</span>
+          </span>
         </label>
-        <select id="preset-select"></select>
 
-        <label>
+        <label class="mode">
           <input type="radio" name="mode" value="custom" />
-          Свои лейблы
+          <span class="mode-body">
+            <span class="mode-icon">✍️</span>
+            <span class="mode-title">Свои лейблы</span>
+            <span class="mode-desc">Придумайте три варианта сами</span>
+          </span>
         </label>
-        <div id="custom-inputs">
-          <input type="text" id="custom-label-0" placeholder="Лейбл 1" />
-          <input type="text" id="custom-label-1" placeholder="Лейбл 2" />
-          <input type="text" id="custom-label-2" placeholder="Лейбл 3" />
-        </div>
 
-        <label>
+        <label class="mode">
           <input type="radio" name="mode" value="none" />
-          Без лейблов
+          <span class="mode-body">
+            <span class="mode-icon">🙊</span>
+            <span class="mode-title">Без лейблов</span>
+            <span class="mode-desc">Только фото — правила решаете сами</span>
+          </span>
         </label>
       </fieldset>
 
-      <button id="start-button">Начать</button>
+      <div class="mode-options">
+        <select id="preset-select" aria-label="Пресет"></select>
+        <div id="custom-inputs">
+          <input type="text" id="custom-label-0" placeholder="Лейбл 1" maxlength="24" />
+          <input type="text" id="custom-label-1" placeholder="Лейбл 2" maxlength="24" />
+          <input type="text" id="custom-label-2" placeholder="Лейбл 3" maxlength="24" />
+        </div>
+      </div>
+
+      <button id="start-button" class="btn btn--primary btn--big">Начать</button>
       <p id="start-error" class="error" hidden></p>
     </section>
 
-    <section id="round-screen" hidden>
+    <section id="round-screen" class="screen" hidden>
+      <div class="round-top">
+        <button id="change-mode-button" class="btn btn--ghost">← Сменить режим</button>
+        <span id="round-counter" class="pill"></span>
+      </div>
+      <p id="chip-hint" class="hint"></p>
       <div id="chip-row"></div>
       <div id="cards-row"></div>
-      <button id="next-button">Следующая тройка</button>
-      <button id="change-mode-button">Сменить режим</button>
+      <div class="round-bottom">
+        <button id="next-button" class="btn btn--primary btn--big">Следующая тройка</button>
+        <p class="hint hint--small">или нажми <kbd>Пробел</kbd></p>
+      </div>
     </section>
 
     <p id="fatal-error" class="error" hidden></p>
   </main>
+
+  <footer class="footer">Сессия живёт только в этой вкладке — после перезагрузки всё с нуля.</footer>
+
   <script type="module" src="js/app.js"></script>
 </body>
 </html>
