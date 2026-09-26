@@ -84,6 +84,7 @@ fieldset {
   border-radius: 999px;
   border: 1px solid #999;
   background: white;
+  color: #111;
   cursor: pointer;
 }
 
