@@ -31,13 +31,20 @@ test('Deck covers the whole pool exactly once when size is a multiple of 3', () 
   assert.deepEqual([...seen].sort(), [...pool].sort());
 });
 
-test('Deck reshuffles the full pool once fewer than 3 items remain', () => {
+test('Deck.next() returns null once fewer than 3 items remain, and stays null', () => {
   const deck = new Deck([1, 2, 3, 4], () => 0);
-  deck.next(); // cursor -> 3, 1 remains
-  assert.equal(deck.order.length, 4);
-  deck.next(); // remaining (1) < 3, must reshuffle before drawing
-  assert.equal(deck.cursor, 3);
-  assert.equal(deck.order.length, 4);
+  assert.equal(deck.next().length, 3); // cursor -> 3, 1 remains
+  assert.equal(deck.next(), null); // remaining (1) < 3, deck is exhausted
+  assert.equal(deck.next(), null); // stays exhausted, never reshuffles
+});
+
+test('hasNext() reflects remaining capacity', () => {
+  const deck = new Deck([1, 2, 3, 4, 5, 6], () => 0.5);
+  assert.equal(deck.hasNext(), true);
+  deck.next();
+  assert.equal(deck.hasNext(), true);
+  deck.next();
+  assert.equal(deck.hasNext(), false);
 });
 
 test('Deck throws when the pool has fewer than 3 items', () => {

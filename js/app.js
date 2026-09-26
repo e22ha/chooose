@@ -133,8 +133,14 @@ changeModeButton.addEventListener('click', () => {
 });
 
 function drawNextTriple() {
-  pinState = createPinState();
   const triple = deck.next();
+  if (!triple) {
+    nextButton.disabled = true;
+    chipHint.textContent = 'Колода закончилась — жми «Сменить режим», чтобы начать заново';
+    return;
+  }
+  nextButton.disabled = false;
+  pinState = createPinState();
   roundNumber += 1;
   roundCounter.textContent = `Тройка №${roundNumber}`;
   renderCards(triple);

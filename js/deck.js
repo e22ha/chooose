@@ -12,16 +12,17 @@ export class Deck {
     if (pool.length < 3) {
       throw new Error('Deck requires at least 3 items');
     }
-    this.pool = pool.slice();
-    this.rng = rng;
-    this.order = shuffle(this.pool, this.rng);
+    this.order = shuffle(pool, rng);
     this.cursor = 0;
   }
 
+  hasNext() {
+    return this.order.length - this.cursor >= 3;
+  }
+
   next() {
-    if (this.order.length - this.cursor < 3) {
-      this.order = shuffle(this.pool, this.rng);
-      this.cursor = 0;
+    if (!this.hasNext()) {
+      return null;
     }
     const triple = this.order.slice(this.cursor, this.cursor + 3);
     this.cursor += 3;
